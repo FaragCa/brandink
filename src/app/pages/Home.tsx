@@ -17,7 +17,7 @@ import imgWork4 from "figma:asset/0f74deedbd6d5a1f9c9a4d79d73d4edbbf9e35db.png";
 import imgTestimonial from "figma:asset/69c12359fc2eb6c20966e23d77ea6a5b57b34d3f.png";
 
 const faqs = [
-  { question: "How long does a project take?", answer: "Most websites are completed within one to two weeks depending on project size." },
+  { question: "How long does a project take?", answer: "Most websites are completed within one to four weeks depending on the package — Starter builds in 1–2 weeks, Complete in 3–4." },
   { question: "Can customers pay through my website?", answer: "Yes. We can integrate secure online payment solutions using Stripe when required." },
   { question: "Can you add an AI chatbot?", answer: "Absolutely. We can integrate AI-powered assistants that answer customer questions and improve response times." },
   { question: "Do I need the Website Care Plan?", answer: "It's optional, but recommended to keep your website secure, updated, and running smoothly." },
@@ -275,9 +275,9 @@ export function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
               { to: 500, prefix: "$", label: "Starting price (CAD)" },
-              { to: 2, suffix: " wk", label: "Typical turnaround" },
-              { to: 5, label: "Pages included" },
-              { to: 24, suffix: "/7", label: "AI assistant uptime" },
+              { to: 3, label: "Website packages" },
+              { to: 2, suffix: " rounds", label: "Revisions included" },
+              { to: 30, label: "Days free support" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
