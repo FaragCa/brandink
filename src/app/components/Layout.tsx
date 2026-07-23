@@ -230,7 +230,7 @@ export function Layout() {
           <div className="flex flex-col gap-4 max-w-sm">
             <BrandLogo className="h-[120px] w-auto self-start" tagline />
             <p className="text-[14px] text-gray-500 leading-relaxed">
-              We help startups tackle the world's biggest challenges with tailored solutions.
+              Modern, high-performing websites that help local businesses build credibility and grow online.
             </p>
             <div className="flex gap-4 mt-4">
               <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-gray-100 transition-colors"><Twitter size={18} /></a>
@@ -247,9 +247,10 @@ export function Layout() {
               <Link to="/projects" className="text-[14px] text-gray-500 hover:text-black">Work</Link>
             </div>
             <div className="flex flex-col gap-4">
-              <h4 className="font-medium text-black">Packages</h4>
-              <Link to="/packages/brand-foundations" className="text-[14px] text-gray-500 hover:text-black">Brand Foundations</Link>
-              <Link to="/packages/complete-business-launch" className="text-[14px] text-gray-500 hover:text-black">Complete Business Launch</Link>
+              <h4 className="font-medium text-black">Services</h4>
+              <Link to="/services" className="text-[14px] text-gray-500 hover:text-black">Website Design</Link>
+              <Link to="/services" className="text-[14px] text-gray-500 hover:text-black">Online Payments</Link>
+              <Link to="/services" className="text-[14px] text-gray-500 hover:text-black">AI Chat Assistant</Link>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="font-medium text-black">Support</h4>

@@ -21,13 +21,13 @@ export function About() {
           >
             We are <span className="font-['Instrument_Serif',serif] italic font-normal tracking-[-2px] text-[#2E52A4]">BrandInk</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-[18px] text-[rgba(27,29,30,0.6)] mx-auto leading-[1.6]"
           >
-            A passionate team of designers, developers, and strategists dedicated to creating meaningful digital experiences that leave a lasting impact.
+            We help businesses establish a stronger online presence through thoughtful design and practical technology.
           </motion.p>
         </div>
       </section>
@@ -57,19 +57,19 @@ export function About() {
           >
             <h2 className="text-[40px] font-medium leading-tight">Our Mission & <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">Vision</span></h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Founded in 2026, BrandInk Agency started with a simple belief: great design has the power to transform businesses. We don't just create beautiful visuals; we craft strategic solutions that solve real problems.
+              BrandInk was created with one mission: helping businesses establish a stronger online presence. Many local businesses either don't have a website or rely on outdated ones that no longer represent who they are — and we believe every business deserves a professional online presence that builds trust and makes it easy for customers to connect.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our vision is to become the go-to partner for innovative startups looking to disrupt their industries. We immerse ourselves in your world, deeply understanding your goals to deliver outcomes that exceed expectations.
+              Our approach combines modern web design, user experience, automation, and emerging AI technologies to create websites that do more than look great — they actively support your business every day. As we grow, we'll keep expanding into branding, digital marketing, and AI solutions, so you can work with one trusted partner as your business evolves.
             </p>
             <div className="flex gap-10 mt-8">
               <div className="flex flex-col">
-                <span className="text-[48px] font-medium"><CountUp to={150} suffix="+" /></span>
-                <span className="text-gray-500">Projects Completed</span>
+                <span className="text-[48px] font-medium"><CountUp to={500} prefix="$" /></span>
+                <span className="text-gray-500">Websites starting at (CAD)</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-[48px] font-medium"><CountUp to={98} suffix="%" /></span>
-                <span className="text-gray-500">Client Retention</span>
+                <span className="text-[48px] font-medium"><CountUp to={2} suffix=" wk" /></span>
+                <span className="text-gray-500">Typical turnaround</span>
               </div>
             </div>
           </motion.div>
@@ -85,10 +85,10 @@ export function About() {
            transition={{ duration: 0.6 }}
            className="bg-[#1b1d1e] text-white rounded-[40px] p-16 flex flex-col items-center text-center"
          >
-            <h2 className="text-[40px] md:text-[48px] font-medium mb-6">Want to join our <span className="font-['Instrument_Serif',serif] italic font-normal text-gray-400">team?</span></h2>
-            <p className="text-gray-400 mb-10 max-w-[600px] text-lg">We are always looking for talented individuals to join our growing agency. Check out our open positions.</p>
+            <h2 className="text-[40px] md:text-[48px] font-medium mb-6">Ready to grow your <span className="font-['Instrument_Serif',serif] italic font-normal text-gray-400">business online?</span></h2>
+            <p className="text-gray-400 mb-10 max-w-[600px] text-lg">Let's build a website that works as hard as you do. Book your free consultation today.</p>
             <Link to="/contact" className="bg-white text-black py-4 px-8 rounded-full font-medium hover:bg-gray-100 transition-colors">
-              View Openings
+              Book Your Free Consultation
             </Link>
          </motion.div>
       </section>

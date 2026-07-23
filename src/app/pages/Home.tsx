@@ -17,20 +17,20 @@ import imgWork4 from "figma:asset/0f74deedbd6d5a1f9c9a4d79d73d4edbbf9e35db.png";
 import imgTestimonial from "figma:asset/69c12359fc2eb6c20966e23d77ea6a5b57b34d3f.png";
 
 const faqs = [
-  { question: "What services does BrandInk Agency offer?", answer: "We offer brand strategy, web development, digital marketing, and UI/UX design." },
-  { question: "Your enquiry into a tailored brand voice?", answer: "We collaborate deeply with your team to understand your unique value proposition." },
-  { question: "How long does a typical project at BrandInk Agency take?", answer: "A typical project ranges from 4 to 12 weeks depending on complexity." },
-  { question: "Do you offer ongoing support after project completion?", answer: "Yes, we offer retainer packages for continuous improvement." },
-  { question: "How often will I receive updates on my project?", answer: "We provide weekly updates and have regular check-in meetings." }
+  { question: "How long does a project take?", answer: "Most websites are completed within one to two weeks depending on project size." },
+  { question: "Can customers pay through my website?", answer: "Yes. We can integrate secure online payment solutions using Stripe when required." },
+  { question: "Can you add an AI chatbot?", answer: "Absolutely. We can integrate AI-powered assistants that answer customer questions and improve response times." },
+  { question: "Do I need the Website Care Plan?", answer: "It's optional, but recommended to keep your website secure, updated, and running smoothly." },
+  { question: "Can my website grow later?", answer: "Yes. We build websites with future growth in mind, making it easy to add additional pages, online stores, booking systems, marketing tools, automation, and more." }
 ];
 
 const serviceTags = [
-  "Brand Strategy",
-  "Visual Identity",
   "Website Design",
-  "AI & Workflow",
-  "SEO & Growth",
-  "Ongoing Support",
+  "Online Payments",
+  "AI Chat Assistant",
+  "Mobile Responsive",
+  "SEO Setup",
+  "Website Care",
 ];
 
 const Word = ({ word, i, total, progress }: { word: string, i: number, total: number, progress: any }) => {
@@ -53,7 +53,7 @@ export function Home() {
     offset: ["start 80%", "end 50%"]
   });
 
-  const words = "Crafting exceptional, well experienced & technology driven strategies to drive impactful results with".split(" ");
+  const words = "A website should do more than exist — it should work for your business, day and night, turning visitors into customers.".split(" ");
 
   return (
     <div className="flex flex-col items-center w-full bg-[#fbfbfb] relative">
@@ -69,18 +69,18 @@ export function Home() {
             transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
             className="text-[#1b1d1e] text-[56px] md:text-[96px] font-medium leading-[1] mb-6 tracking-[-0.03em]"
           >
-            Building bold brands <br /> with <span className="font-['Instrument_Serif',serif] italic font-normal tracking-[-2px] text-[#2E52A4]">thoughtful design</span>
+            Websites that help local <br /> businesses <span className="font-['Instrument_Serif',serif] italic font-normal tracking-[-2px] text-[#2E52A4]">grow</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-[18px] md:text-[20px] text-[rgba(27,29,30,0.6)] max-w-[650px] mb-12 leading-[1.6]"
           >
-            At BrandInk, we help small startups tackle the world's biggest challenges with tailored solutions, guiding you from strategy to success in a competitive market.
+            More than just a beautiful website. BrandInk creates modern, high-performing websites that help businesses build credibility, attract customers, accept payments, and streamline their operations — all in one place.
           </motion.p>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -88,11 +88,11 @@ export function Home() {
           >
             <Magnetic>
               <Link
-                to="/services"
-                className="bg-[#2E52A4] text-white flex items-center justify-between gap-4 h-[64px] pl-[28px] pr-[12px] rounded-[32px] hover:bg-[#24417F] transition-colors w-[220px]"
+                to="/contact"
+                className="bg-[#2E52A4] text-white flex items-center justify-between gap-4 h-[64px] pl-[28px] pr-[12px] rounded-[32px] hover:bg-[#24417F] transition-colors w-[300px]"
               >
-                <span className="font-medium text-[16px]">Get Started</span>
-                <div className="bg-white text-[#2E52A4] w-[40px] h-[40px] rounded-full flex items-center justify-center">
+                <span className="font-medium text-[16px]">Book Your Free Consultation</span>
+                <div className="bg-white text-[#2E52A4] w-[40px] h-[40px] rounded-full flex items-center justify-center shrink-0">
                   <ArrowUpRight size={20} strokeWidth={2.5} />
                 </div>
               </Link>
@@ -113,7 +113,7 @@ export function Home() {
                   <Star size={16} fill="currentColor" className="stroke-none" />
                   <Star size={16} fill="currentColor" className="stroke-none" />
                 </div>
-                <span className="text-[14px] text-gray-500 font-medium mt-1">Trusted by 200+ clients</span>
+                <span className="text-[14px] text-gray-500 font-medium mt-1">Starting at $500 CAD</span>
               </div>
             </div>
           </motion.div>
@@ -127,7 +127,7 @@ export function Home() {
 
       {/* Stats Section */}
       <section className="w-full max-w-[1272px] mx-auto px-4 mb-32 flex flex-col items-center text-center relative">
-        <SectionLabel>Our approach</SectionLabel>
+        <SectionLabel>Why BrandInk</SectionLabel>
         <h2
           ref={textRef}
           className="text-[32px] md:text-[48px] leading-[1.2] font-medium max-w-[900px] flex flex-wrap justify-center gap-[0.3em]"
@@ -140,7 +140,7 @@ export function Home() {
 
       {/* Features Grid */}
       <section className="w-full max-w-[1272px] mx-auto px-4 mb-32 flex flex-col items-center text-center">
-        <SectionLabel>What we do</SectionLabel>
+        <SectionLabel>Our services</SectionLabel>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -148,7 +148,7 @@ export function Home() {
           transition={{ duration: 0.6 }}
           className="text-[40px] md:text-[48px] font-medium mb-16 leading-tight"
         >
-          Where innovation <br /> meets <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">aesthetics</span>
+          Everything your business <br /> needs to <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">win online</span>
         </motion.h2>
 
         <motion.div 
@@ -162,10 +162,10 @@ export function Home() {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 w-full mb-16"
         >
           {[
-            { title: "Brand Strategy\n& Identity", bg: "bg-[#f3efff]" },
-            { title: "Website Design\n& Digital Experiences", bg: "bg-[#ffeaec]" },
-            { title: "AI & Workflow\nIntegration", bg: "bg-[#eaf4ff]" },
-            { title: "Ongoing\nSupport", bg: "bg-[#ffefe3]" }
+            { title: "Website Design\n& Development", bg: "bg-[#eaf4ff]" },
+            { title: "Online\nPayments", bg: "bg-[#e8f7ea]" },
+            { title: "AI Chat\nAssistant", bg: "bg-[#f3efff]" },
+            { title: "Website\nCare Plan", bg: "bg-[#ffefe3]" }
           ].map((item, i) => (
             <motion.div 
               key={i}
@@ -188,18 +188,18 @@ export function Home() {
           className="bg-[#1b1d1e] rounded-[40px] w-full py-6 px-10 flex flex-col sm:flex-row items-center justify-between text-left"
         >
            <div>
-             <h3 className="text-white font-medium text-lg">Ready to transform your brand?</h3>
-             <p className="text-gray-400 mt-1">Start your creative journey with us</p>
+             <h3 className="text-white font-medium text-lg">Ready for a website that works for you?</h3>
+             <p className="text-gray-400 mt-1">See our services and simple pricing</p>
            </div>
-           <Link to="/contact" className="bg-white text-black px-8 py-4 rounded-full flex items-center gap-3 mt-4 sm:mt-0 font-medium hover:bg-gray-100 transition-colors">
-             Learn More <ArrowRight size={18} />
+           <Link to="/services" className="bg-white text-black px-8 py-4 rounded-full flex items-center gap-3 mt-4 sm:mt-0 font-medium hover:bg-gray-100 transition-colors">
+             View Services <ArrowRight size={18} />
            </Link>
         </motion.div>
       </section>
 
       {/* Work Section */}
       <section className="w-full max-w-[1272px] mx-auto px-4 mb-32 flex flex-col items-center">
-        <SectionLabel>Selected work</SectionLabel>
+        <SectionLabel>Recent work</SectionLabel>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +207,7 @@ export function Home() {
           transition={{ duration: 0.6 }}
           className="text-[40px] md:text-[48px] font-medium text-center mb-16 max-w-[600px] leading-tight"
         >
-          How we transformed a small business's <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">online presence</span>
+          Websites that give businesses a professional <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">online presence</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 w-full">
@@ -263,21 +263,21 @@ export function Home() {
           >
             <div className="flex justify-center">
               <span className="flex items-center gap-3">
-                <span className="font-['JetBrains_Mono',monospace] text-[13px] text-[#D7E84C]">[04]</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D7E84C]" />
                 <span className="font-['JetBrains_Mono',monospace] text-[12px] tracking-[0.25em] uppercase text-white/40">By the numbers</span>
               </span>
             </div>
             <h2 className="text-white text-[32px] md:text-[40px] font-medium mt-5 leading-tight">
-              Real brands. Real impact. <span className="font-['Instrument_Serif',serif] italic font-normal text-[#D7E84C]">Zero fluff.</span>
+              Fast, modern, mobile-friendly. <span className="font-['Instrument_Serif',serif] italic font-normal text-[#D7E84C]">Built to convert.</span>
             </h2>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
-              { to: 85, suffix: "+", label: "Brands launched" },
-              { to: 3.5, decimals: 1, suffix: "wk", label: "Avg. time to launch" },
-              { to: 96, suffix: "%", label: "Client satisfaction" },
-              { to: 24, suffix: "h", label: "Average response time" },
+              { to: 500, prefix: "$", label: "Starting price (CAD)" },
+              { to: 2, suffix: " wk", label: "Typical turnaround" },
+              { to: 5, label: "Pages included" },
+              { to: 24, suffix: "/7", label: "AI assistant uptime" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -288,7 +288,7 @@ export function Home() {
                 className="flex flex-col items-center text-center border-l border-white/10 first:border-l-0 md:first:border-l-0"
               >
                 <div className="text-white text-[40px] md:text-[56px] font-medium leading-none mb-3">
-                  <CountUp to={stat.to} suffix={stat.suffix} decimals={stat.decimals} />
+                  <CountUp to={stat.to} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                 </div>
                 <p className="text-white/40 text-sm">{stat.label}</p>
               </motion.div>
@@ -307,7 +307,7 @@ export function Home() {
           transition={{ duration: 0.6 }}
           className="text-[40px] md:text-[48px] font-medium text-center mb-16 max-w-[600px] mx-auto leading-tight"
         >
-          What our satisfied customers are saying <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">about us</span>
+          What business owners say <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">about us</span>
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
@@ -424,14 +424,14 @@ export function Home() {
            transition={{ duration: 0.6 }}
            className="bg-gradient-to-br from-[#e7edfb] to-[#eef6bd] rounded-[40px] p-16 flex flex-col items-center text-center"
          >
-            <h2 className="text-[40px] md:text-[48px] font-medium mb-4">Innovative Solutions for <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">bold brands</span></h2>
-            <p className="text-gray-500 mb-10 max-w-[600px]">Partner with us to redefine your brand and elevate your digital presence. Let's create something extraordinary together.</p>
+            <h2 className="text-[40px] md:text-[48px] font-medium mb-4">Ready to give your business a <span className="font-['Instrument_Serif',serif] italic font-normal text-[#2E52A4]">professional online presence?</span></h2>
+            <p className="text-gray-500 mb-10 max-w-[600px]">Let's build a website that works as hard as you do. Book your free consultation today and discover how BrandInk can help your business grow online.</p>
             <Link
-              to="/services"
+              to="/contact"
               className="bg-[#1b1d1e] text-white flex items-center justify-between gap-4 h-[64px] pl-[28px] pr-[12px] rounded-[32px] hover:bg-black transition-colors"
             >
-              <span className="font-medium text-[16px]">Get Started</span>
-              <div className="bg-white text-black w-[40px] h-[40px] rounded-full flex items-center justify-center">
+              <span className="font-medium text-[16px]">Book Your Free Consultation</span>
+              <div className="bg-white text-black w-[40px] h-[40px] rounded-full flex items-center justify-center shrink-0">
                 <ArrowUpRight size={20} strokeWidth={2.5} />
               </div>
             </Link>

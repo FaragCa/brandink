@@ -16,7 +16,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We'll get back to you soon.");
+    alert("Thanks! We'll be in touch shortly to book your free consultation.");
     setFormData({ name: "", email: "", service: "", budget: "", message: "" });
   };
 
@@ -37,15 +37,15 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             className="text-[#1b1d1e] text-[50px] md:text-[70px] font-medium leading-[1.1] mb-6"
           >
-            Let's build something <span className="font-['Instrument_Serif',serif] italic font-normal tracking-[-2px] text-gray-500">amazing</span>
+            Book your free <span className="font-['Instrument_Serif',serif] italic font-normal tracking-[-2px] text-gray-500">consultation</span>
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-[18px] text-[rgba(27,29,30,0.6)] mx-auto leading-[1.6]"
           >
-            Ready to take your brand to the next level? Drop us a line and let's discuss how we can help you achieve your goals.
+            Ready to give your business a professional online presence? Tell us a little about your project and we'll be in touch to discuss how BrandInk can help you grow online.
           </motion.p>
         </div>
       </section>
@@ -151,17 +151,17 @@ export function Contact() {
                       className="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2E52A4] focus:border-transparent transition-all bg-white appearance-none"
                     >
                       <option value="" disabled>Select a service</option>
-                      <option value="brand">Brand Strategy & Identity</option>
-                      <option value="website">Website Design & Digital Experiences</option>
-                      <option value="ai">AI & Workflow Integration</option>
-                      <option value="support">Ongoing Support</option>
+                      <option value="website">Website Design & Development</option>
+                      <option value="payments">Online Payments</option>
+                      <option value="ai">AI Chat Assistant</option>
+                      <option value="care">Website Care Plan</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
                   <div className="flex flex-col gap-2">
                     <label htmlFor="budget" className="font-medium text-sm text-gray-700">Project Budget</label>
-                    <select 
-                      id="budget" 
+                    <select
+                      id="budget"
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
@@ -169,10 +169,10 @@ export function Contact() {
                       className="px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#2E52A4] focus:border-transparent transition-all bg-white appearance-none"
                     >
                       <option value="" disabled>Select a range</option>
-                      <option value="10k-25k">$10k - $25k</option>
-                      <option value="25k-50k">$25k - $50k</option>
-                      <option value="50k-100k">$50k - $100k</option>
-                      <option value="100k+">$100k+</option>
+                      <option value="500-750">$500 - $750</option>
+                      <option value="750-1500">$750 - $1,500</option>
+                      <option value="1500+">$1,500+</option>
+                      <option value="unsure">Not sure yet</option>
                     </select>
                   </div>
                 </div>
@@ -192,7 +192,7 @@ export function Contact() {
                 </div>
                 
                 <button type="submit" className="bg-[#1b1d1e] text-white flex items-center justify-center gap-2 py-4 rounded-full font-medium hover:bg-black transition-colors w-full mt-2">
-                  Send Message <ArrowUpRight size={20} />
+                  Book My Free Consultation <ArrowUpRight size={20} />
                 </button>
               </form>
             </div>
